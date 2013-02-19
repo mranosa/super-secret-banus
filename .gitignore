@@ -1,2 +1,3 @@
 *.aj
 target
+.DS_Store
