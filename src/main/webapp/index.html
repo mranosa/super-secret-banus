@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title></title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+
+        <link rel="stylesheet" href="styles/fixed-width.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/colors/default.css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="scripts/vendor/twitter.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="scripts/vendor/jquery.gmap.min.js"></script>
+        <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+
+    </head>
+    <body ng-app="trippingIronmanApp">
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        
+        <!--[if lt IE 9]>
+            <script src="scripts/vendor/es5-shim.min.js"></script>
+            <script src="scripts/vendor/json3.min.js"></script>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <div id="wrapper" class="container-fluid">
+            <!-- Header -->
+            <div class="ie-dropdown-fix" >
+                <!-- Header -->
+                <div class="row-fluid" id="header">
+                    <!-- Logo -->
+                    <div class="span5">
+                        <a href="#"><img src="http://placehold.it/200x58&text=Logo+Here" alt="logo" /></a>
+                    </div>
+
+                    <!-- Social / Contact -->
+                    <div class="span4 pull-right">
+
+                        <!-- Social Icons -->
+                        <ul class="social-icons">
+                            <li class="facebook"><a href="#">Facebook</a></li>
+                            <li class="twitter"><a href="#">Twitter</a></li>
+                            <li class="googleplus"><a href="#">Google Plus</a></li>
+                            <li class="youtube"><a href="#">Youtube</a></li>
+                            <li class="pintrest"><a href="#">Pintrest</a></li>
+                        </ul>
+
+                        <!-- Contact Details -->
+                        <div id="contact-top">
+                            <ul>
+                                <li><i class="icon-envelope"></i><a href="#">nci.website.ph@gmail.com</a></li>
+                                <li><i class="icon-phone"></i>+1 123 456-789</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header / End -->
+
+                <!-- Navigation -->
+                <div id="navigation" class="margintop">
+                    <ul id="nav">
+                        <li>
+                            <a href="#/"><span style="color: white">Home</span></a>
+                            <ul>
+                                <li>
+                                    <a href="#/overview">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#/profile">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#/news">News</a>
+                                </li>
+                                <li>
+                                    <a href="#/stories">Feature Stories</a>
+                                </li>
+                                <li>
+                                    <a href="#/agencies">Agencies</a>
+                                </li>
+                                <li>
+                                    <a href="#/partners">Partners</a>
+                                </li>
+                                <li>
+                                    <a href="#/faqs">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="#/links">Links</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><span style="color: white">About Us</span></a>
+                            <ul>
+                                <li>
+                                    <a href="#/what">What is NCI?</a>
+                                </li>
+                                <li>
+                                    <a href="#/history">Historical Background</a>
+                                </li>
+                                <li>
+                                    <a href="#/bases">Legal Bases</a>
+                                </li>
+                                <li>
+                                    <a href="#/implementation">Implementation Mechanism</a>
+                                </li>
+                                <li>
+                                    <a href="#/structure">Organizational Structure</a>
+                                </li>
+                                <li>
+                                    <a href="#/officials">Key Officials</a>
+                                </li>
+                                <li>
+                                    <a href="#/components">NCI Components</a>
+                                </li>
+                                <li>
+                                    <a href="#/groups">NCI Ecosystem Technical Working Groups</a>
+                                </li>
+                                <li>
+                                    <a href="#/partnership">NCI Partnerships</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><span style="color: white">Reports</span></a>
+                            <ul>
+                                <li>
+                                    <a href="#/report">Report List</a>
+                                </li>
+                                <li>
+                                    <a href="#/materials">Resource Materials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#/contact">Contact Us</a>
+                        </li>
+                        <li style="float: right;">
+                            <a href="#/login">Login</a>
+                        </li>
+                    </ul>
+                </div> 
+                <div class="nav-shadow"></div>
+                <div class="clear"></div>
+            </div>
+            <!-- Navigation / End -->
+
+            <!-- content  -->
+            <div ng-view></div>
+            <!-- content end -->
+
+            
+        </div>
+
+        <!-- Footer Top -->
+            <div id="footer" class="container-fluid paddingbottom" >
+
+
+                <div class="row-fluid">
+
+                    <!-- About -->
+                    <div class="span3">
+                        <div class="footer-headline"><h4>About Us</h4></div>
+                        <p>Lorem sequat ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</p>
+                    </div>
+
+                    <!-- Subscribe  -->
+                    <div class="span3">
+                        <div class="footer-headline"><h4>Subscribe</h4></div>
+                        <p>Keep updated with our news</p><p>Your email is safe with us!</p>
+                        <div class="input-append">
+                            <input  id="appendedInputButton"  type="text" class="span7" placeholder="Enter Email Address">
+                            <button class="btn" type="button">Subscribe!</button>
+                        </div>
+                    </div>
+
+                    <!-- Photo Stream -->
+                    <div class="span3">
+                        <div class="footer-headline"><h4>Photo Stream</h4></div>
+                        <div class="flickr-widget">
+                            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=26662207@N00"></script>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <!-- Latest Tweets -->
+                    <div class="span3">
+                        <div class="footer-headline"><h4>Latest Tweets</h4></div>
+                        <ul id="twitter"></ul>
+                        <script type="text/javascript">
+                            jQuery(document).ready(function($){
+                                $.getJSON('http://api.twitter.com/1/statuses/user_timeline/markranosa.json?count=2&amp;callback=?', function(tweets){
+                                    $("#twitter").html(tz_format_twitter(tweets));
+                                }); });
+                        </script>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Footer / Bottom -->
+            <div id="footer" class="container-fluid" style="background: #111;">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div id="footer-bottom">
+                            Designed and built with all the love in the world by <a href="https://twitter.com/markranosa" target="_blank">@markranosa</a>.
+
+                            <div id="scroll-top-top"><a href="#" title="Go to Top"></a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Footer / End -->
+
+        <script src="scripts/vendor/angular.js"></script>
+        <script src="scripts/vendor/selectnav.js"></script>
+        <script src="scripts/vendor/bootstrap.js"></script>
+        <script src="scripts/vendor/flexslider.js"></script>
+        <script src="scripts/vendor/custom.js"></script>
+
+
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/overview.js"></script>
+        <script src="scripts/controllers/profile.js"></script>
+        <script src="scripts/controllers/news.js"></script>
+        <script src="scripts/controllers/stories.js"></script>
+        <script src="scripts/controllers/agencies.js"></script>
+        <script src="scripts/controllers/partners.js"></script>
+        <script src="scripts/controllers/faqs.js"></script>
+        <script src="scripts/controllers/links.js"></script>
+        <script src="scripts/controllers/what.js"></script>
+        <script src="scripts/controllers/history.js"></script>
+        <script src="scripts/controllers/bases.js"></script>
+        <script src="scripts/controllers/implementation.js"></script>
+        <script src="scripts/controllers/structure.js"></script>
+        <script src="scripts/controllers/officials.js"></script>
+        <script src="scripts/controllers/components.js"></script>
+        <script src="scripts/controllers/groups.js"></script>
+        <script src="scripts/controllers/partnership.js"></script>
+        <script src="scripts/controllers/report.js"></script>
+        <script src="scripts/controllers/materials.js"></script>
+        <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/services/UserService.js"></script>
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

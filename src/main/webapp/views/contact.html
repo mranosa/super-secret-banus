@@ -1,0 +1,65 @@
+<!-- Content -->
+<div class="row-fluid">
+    <div id="page-title">
+        <img src="/images/icons/mast/contact.png" alt="">&nbsp;
+        <h2>Contact Us</h2>
+    </div>
+</div>
+
+<div class="row-fluid">
+
+    <!-- Standard Structure -->
+    <div class="span8">
+        <p>We want to hear from you! Just enter your name, email address, and message into the form below and send away.</p>
+
+        <div id="contact-form" ng-submit="sendEmail()">
+            <form>
+                <fieldset>
+                    <label>Name</label>
+                    <input type="text" class="input-xlarge">
+
+                    <label>Email</label>
+                    <input type="text" class="input-xlarge">
+
+                    <label>Comment</label>
+                    <textarea rows="6" class="input-xxlarge"></textarea>
+                </fieldset>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Send Email</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="span4 google-map">
+
+        <div class="headline no-margin"><h4>Our Location</h4></div>
+
+        <!-- Google Maps -->
+        <div id="googlemaps" class="google-map google-map-full" style="height:250px"></div>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            jQuery('#googlemaps').gMap({
+                maptype: 'ROADMAP',
+                scrollwheel: false,
+                zoom: 13,
+                markers: [
+                    {
+                        address: 'Elliptical Road, Diliman, Quezon City, 1107',
+                        html: '',
+                        popup: false
+                    }
+                ]
+            });
+        });
+        </script>
+
+        <p>Department of Agriculture, Elliptical Road, Diliman, Quezon City, 1107</p>
+
+    </div>
+
+</div>
