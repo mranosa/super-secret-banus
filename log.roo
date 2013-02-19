@@ -5,3 +5,4 @@ entity jpa --class ~.Account --testAutomatically
 field string --fieldName username --notNull 
 field string --fieldName password --notNull 
 field string --fieldName name --notNull 
+json all
