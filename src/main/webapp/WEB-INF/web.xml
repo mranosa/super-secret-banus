@@ -75,7 +75,7 @@
     
     <servlet-mapping>
         <servlet-name>nci</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/accounts</url-pattern>
     </servlet-mapping>
     
     <session-config>
