@@ -8,8 +8,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
 @RooJson
+@RooJpaActiveRecord(finders = { "findAccountsByUsernameEquals" })
 public class Account {
 
     @NotNull

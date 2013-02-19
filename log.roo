@@ -8,3 +8,4 @@ field string --fieldName name --notNull
 json all
 web mvc setup
 web mvc json all --package ~.web
+finder add --class ~.Account --finderName findAccountsByUsernameEquals
