@@ -27,7 +27,7 @@ public class EmailController {
 
 	@RequestMapping(headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> email() throws Exception {
+    public ResponseEntity<String> email(@RequestParam("message") String messageText, @RequestParam("from") String from, @RequestParam("name") String name) throws Exception {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         
@@ -45,11 +45,10 @@ public class EmailController {
 
         MimeMessage message = new MimeMessage(mailSession);
 
-        message.setText("Dear Mail Crawler,"
-				+ "\n\n No spam to my email, please!");
+        message.setText(messageText);
 
-        message.setFrom(new InternetAddress("your@father.com"));
-        message.setSubject("This is the new subject");
+        message.setFrom(new InternetAddress(from));
+        message.setSubject("Message from " + name);
         message.addRecipient(Message.RecipientType.TO,
              new InternetAddress("mark.ranosa@gmail.com"));
 
